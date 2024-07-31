@@ -75,7 +75,7 @@ const AddIncome = () => {
     ) {
       try {
         const res = await axios.get(
-          `user/riceCaltivation_incomeExpense/${Number(
+          `https://deploy-nodejs-render.onrender.com/user/riceCaltivation_incomeExpense/${Number(
             values.user_id
           )}`
         );
@@ -87,7 +87,7 @@ const AddIncome = () => {
             Number(yield_rice.total_yield)
           ) {
             await axios
-              .post(`incomeExpense`, values)
+              .post(`https://deploy-nodejs-render.onrender.com/incomeExpense`, values)
               .then((result) => console.log(result.data));
             await axios
               .put(
